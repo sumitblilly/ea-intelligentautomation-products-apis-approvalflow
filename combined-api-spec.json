@@ -1,0 +1,1094 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Combined API Specification",
+    "description": "Combined API specification from multiple microservices\n\nCombined from the following services:\n- CancelRequestAction\n- CancelRequestDB\n- GetApprovalsForRequester\n- GetApprovalsForReviewer\n- GetRequestDetails\n- GetReviewTaskDetails\n- GiveReviewFeedback\n- ListFeedbacksReceived\n- LoadTemplate\n- NewApproval\n- RespondtoReviewFeedback\n- SaveTemplate\n- SearchTemplate\n- UpdateApprovalRequest\n- UpdateCompleteTaskDetails\n- UpdateFeedbackApproval_Request\n- UpdateReviewStatus\n- UpdateReviewTaskID\n- UpdateTaskStatusToCancel\n- UpdateTaskStatusbyTaskID",
+    "version": "1.0.0"
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/CancelRequestAction/create": {
+      "post": {
+        "tags": [
+          "CancelRequestAction",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelRequestAction_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/CancelRequestAction_create"
+            }
+          }
+        }
+      }
+    },
+    "/CancelRequestDB/create": {
+      "post": {
+        "tags": [
+          "CancelRequestDB",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelRequestDB_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/CancelRequestDB_create"
+            }
+          }
+        }
+      }
+    },
+    "/GetApprovalsForRequester/get/{requesterID}": {
+      "get": {
+        "tags": [
+          "GetApprovalsForRequester",
+          "get"
+        ],
+        "summary": "Find a model instance by {{id}} from the data source.",
+        "operationId": "get.findById",
+        "parameters": [
+          {
+            "name": "requesterID",
+            "in": "path",
+            "description": "get id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/GetApprovalsForRequester_get"
+            }
+          }
+        }
+      }
+    },
+    "/GetApprovalsForReviewer/get/{requesterID}": {
+      "get": {
+        "tags": [
+          "GetApprovalsForReviewer",
+          "get"
+        ],
+        "summary": "Find a model instance by {{id}} from the data source.",
+        "operationId": "get.findById",
+        "parameters": [
+          {
+            "name": "requesterID",
+            "in": "path",
+            "description": "get id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/GetApprovalsForReviewer_get"
+            }
+          }
+        }
+      }
+    },
+    "/GetRequestDetails/get/{RequestId}": {
+      "get": {
+        "tags": [
+          "GetRequestDetails",
+          "get"
+        ],
+        "summary": "Find a model instance by {{id}} from the data source.",
+        "operationId": "get.findById",
+        "parameters": [
+          {
+            "name": "RequestId",
+            "in": "path",
+            "description": "get id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/GetRequestDetails_get"
+            }
+          }
+        }
+      }
+    },
+    "/GetReviewTaskDetails/get/{TaskId}": {
+      "get": {
+        "tags": [
+          "GetReviewTaskDetails",
+          "get"
+        ],
+        "summary": "Find a model instance by {{id}} from the data source.",
+        "operationId": "get.findById",
+        "parameters": [
+          {
+            "name": "TaskId",
+            "in": "path",
+            "description": "get id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/GetReviewTaskDetails_get"
+            }
+          }
+        }
+      }
+    },
+    "/GiveReviewFeedback/create": {
+      "post": {
+        "tags": [
+          "GiveReviewFeedback",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GiveReviewFeedback_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/GiveReviewFeedback_create"
+            }
+          }
+        }
+      }
+    },
+    "/ListFeedbacksReceived/get/{RequestID}": {
+      "get": {
+        "tags": [
+          "ListFeedbacksReceived",
+          "get"
+        ],
+        "summary": "Find a model instance by {{id}} from the data source.",
+        "operationId": "get.findById",
+        "parameters": [
+          {
+            "name": "RequestID",
+            "in": "path",
+            "description": "get id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/ListFeedbacksReceived_get"
+            }
+          }
+        }
+      }
+    },
+    "/LoadTemplate/get/{createdBy}": {
+      "get": {
+        "tags": [
+          "LoadTemplate",
+          "get"
+        ],
+        "summary": "Find a model instance by {{id}} from the data source.",
+        "operationId": "get.findById",
+        "parameters": [
+          {
+            "name": "createdBy",
+            "in": "path",
+            "description": "get id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/LoadTemplate_get"
+            }
+          }
+        }
+      }
+    },
+    "/NewApproval/create": {
+      "post": {
+        "tags": [
+          "NewApproval",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewApproval_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/NewApproval_create"
+            }
+          }
+        }
+      }
+    },
+    "/RespondtoReviewFeedback/create": {
+      "post": {
+        "tags": [
+          "RespondtoReviewFeedback",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RespondtoReviewFeedback_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/RespondtoReviewFeedback_create"
+            }
+          }
+        }
+      }
+    },
+    "/SaveTemplate/create": {
+      "post": {
+        "tags": [
+          "SaveTemplate",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SaveTemplate_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/SaveTemplate_create"
+            }
+          }
+        }
+      }
+    },
+    "/SearchTemplate/create": {
+      "post": {
+        "tags": [
+          "SearchTemplate",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SearchTemplate_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/SearchTemplate_create"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateApprovalRequest/update": {
+      "post": {
+        "tags": [
+          "UpdateApprovalRequest",
+          "update"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "update.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateApprovalRequest_update"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateApprovalRequest_update"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateCompleteTaskDetails/update": {
+      "post": {
+        "tags": [
+          "UpdateCompleteTaskDetails",
+          "update"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "update.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateCompleteTaskDetails_update"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateCompleteTaskDetails_update"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateFeedbackApproval_Request/create": {
+      "post": {
+        "tags": [
+          "UpdateFeedbackApproval_Request",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateFeedbackApproval_Request_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateFeedbackApproval_Request_create"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateReviewStatus/update": {
+      "post": {
+        "tags": [
+          "UpdateReviewStatus",
+          "update"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "update.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateReviewStatus_update"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateReviewStatus_update"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateReviewTaskID/update": {
+      "post": {
+        "tags": [
+          "UpdateReviewTaskID",
+          "update"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "update.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateReviewTaskID_update"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateReviewTaskID_update"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateTaskStatusToCancel/create": {
+      "post": {
+        "tags": [
+          "UpdateTaskStatusToCancel",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateTaskStatusToCancel_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateTaskStatusToCancel_create"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateTaskStatusbyTaskID/create": {
+      "post": {
+        "tags": [
+          "UpdateTaskStatusbyTaskID",
+          "create"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "create.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateTaskStatusbyTaskID_create"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/UpdateTaskStatusbyTaskID_create"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CancelRequestAction_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "RequestID": {
+          "type": "string"
+        },
+        "Output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "CancelRequestDB_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "RequestID": {
+          "type": "string"
+        },
+        "Output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApprovalsForRequester_get": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "requesterID": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApprovalsForReviewer_get": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "requesterID": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetRequestDetails_get": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "RequestId": {
+          "type": "string"
+        },
+        "output": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetReviewTaskDetails_get": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "TaskId": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GiveReviewFeedback_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "RequestID": {
+          "type": "string"
+        },
+        "ReviewerID": {
+          "type": "string"
+        },
+        "RequesterID": {
+          "type": "string"
+        },
+        "FeedbackMessage": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "ReviewerName": {
+          "type": "string"
+        },
+        "RequesterName": {
+          "type": "string"
+        },
+        "StageID": {
+          "type": "string"
+        },
+        "FeedbackID": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ListFeedbacksReceived_get": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "RequestID": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "LoadTemplate_get": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "NewApproval_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "input": {
+          "type": "object",
+          "properties": {
+            "ReviewRequests": {
+              "type": "object",
+              "properties": {}
+            },
+            "ReviewStages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {}
+                }
+              }
+            },
+            "Reviewers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {}
+                }
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "RespondtoReviewFeedback_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "FeedbackID": {
+          "type": "string"
+        },
+        "DB-Output": {
+          "type": "object",
+          "properties": {}
+        },
+        "BAW-Output": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      "additionalProperties": false
+    },
+    "SaveTemplate_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "string"
+        },
+        "TemplateTitle": {
+          "type": "string"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "RequestTitle": {
+          "type": "string"
+        },
+        "ReviewURL": {
+          "type": "string"
+        },
+        "ReviewRequestDetails": {
+          "type": "string"
+        },
+        "StagesJSON": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "string"
+        },
+        "output": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      "additionalProperties": false
+    },
+    "SearchTemplate_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "CreatedBy": {
+          "type": "string"
+        },
+        "TemplateTitle": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateApprovalRequest_update": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "RequestStatus": {
+          "type": "string"
+        },
+        "RequestID": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCompleteTaskDetails_update": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateFeedbackApproval_Request_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "RequestID": {
+          "type": "string"
+        },
+        "RequestTitle": {
+          "type": "string"
+        },
+        "ReviewRequestDetails": {
+          "type": "string"
+        },
+        "ReviewURL": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateReviewStatus_update": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "Comments": {
+          "type": "string"
+        },
+        "ApprovalStatus": {
+          "type": "string"
+        },
+        "StageID": {
+          "type": "string"
+        },
+        "ReviewerId": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateReviewTaskID_update": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        },
+        "StageID": {
+          "type": "string"
+        },
+        "ReviewerId": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTaskStatusToCancel_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "StageID": {
+          "type": "string"
+        },
+        "NewApprovalStatus": {
+          "type": "string"
+        },
+        "CurrentApprovalStatus": {
+          "type": "string"
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {}
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateTaskStatusbyTaskID_create": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "Comments": {
+          "type": "string"
+        },
+        "ApprovalStatus": {
+          "type": "string"
+        },
+        "taskId": {
+          "type": "string"
+        },
+        "output": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
